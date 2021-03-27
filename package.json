@@ -1,0 +1,22 @@
+{
+  "name": "deja-brew",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jasminekay505/Deja-Brew.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jasminekay505/Deja-Brew/issues"
+  },
+  "homepage": "https://github.com/jasminekay505/Deja-Brew#readme",
+  "devDependencies": {
+    "eslint": "^7.23.0"
+  }
+}
