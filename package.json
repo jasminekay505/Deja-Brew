@@ -1,0 +1,33 @@
+{
+  "name": "deja-brew",
+  "version": "1.0.0",
+  "description": "An application to discover new breweries.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jasminekay505/Deja-Brew.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jasminekay505/Deja-Brew/issues"
+  },
+  "homepage": "https://github.com/jasminekay505/Deja-Brew#readme",
+  "dependencies": {
+    "connect-session-sequelize": "^7.1.1",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.2.1",
+    "express-session": "^1.17.1",
+    "mysql2": "^2.2.5",
+    "sequelize": "^6.6.2",
+    "yelp": "^1.0.2"
+  },
+  "devDependencies": {
+    "eslint": "^7.23.0"
+  }
+}
