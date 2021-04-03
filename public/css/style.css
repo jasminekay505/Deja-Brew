@@ -1,0 +1,63 @@
+html {
+    
+}
+
+.navbar {
+    margin-bottom: 50px!important;
+    border-radius: 0!important;
+    font-family: 'Cinzel Decorative', cursive;
+    font-weight: bolder;
+    font-size: 30px;
+    text-shadow: 2px 2px;
+  }
+ 
+.jumbotron {
+    margin-bottom: 0!important;
+  }
+
+  .panel {
+      background-color: #5a3d55;
+  }
+
+  .signup {
+      background-color: #5a3d55;
+      padding: 20px;
+      font-size: 20px;
+      margin: 20px;
+  }
+
+  .login {
+    background-color: #5a3d55;
+    padding: 20px;
+    padding-bottom: 155px;
+    font-size: 20px;
+    margin: 20px;
+  }
+
+  label {
+      color: black;
+      background-color: #a2de96;
+      padding: 5px;
+      margin: 5px;
+      border-style: solid;
+      border-width: 2px;
+  }
+
+  body {
+    background-color: #3ca59d !important;
+  }
+
+  h2 {
+      background-color: #e79c2a;
+      margin-right: 70%;
+      border-style: solid;
+      border-width: 2px;
+  }
+  
+  input[type='checkbox'] {
+    width:20px;
+    height:30px;
+    background:white;
+    border-radius:5px;
+    border:2px solid #555;
+}
