@@ -15,6 +15,7 @@ router.get('/', async (req, res) => {
             ]
         });
         const posts = postData.map(post => post.get({ plain: true }));
+        //Might need to change this route
         res.render('homepage', {
             posts,
             loggedIn: req.session.loggedIn
@@ -67,7 +68,7 @@ router.get('/post/:id', withAuth, (req, res) => {
         }
 
         const comments = commentData.map(comment => comment.get({ plain: true }))
-
+        //Might need to change this route
         res.render('single-post', {
             post, comments, loggedIn: req.session.loggedIn
         });
@@ -76,5 +77,7 @@ router.get('/post/:id', withAuth, (req, res) => {
         res.status(400).json(err);
     }
 });
+
+//Add a dashboard route
 
 module.exports = router;
