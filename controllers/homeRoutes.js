@@ -33,15 +33,6 @@ router.get('/login', (req, res) => {
     res.render('login');
 });
 
-//Signup page
-router.get('/signup', (req, res) => {
-    if (req.session.loggedIn) {
-        res.redirect('/');
-        return;
-    }
-    res.render('signup');
-});
-
 //Single Post
 router.get('/post/:id', withAuth, (req, res) => {
     try {
