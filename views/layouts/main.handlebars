@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../public/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <title>Homepage</title>
+</head>
+<body>
+    <div class="jumbotron text-center jumbotron-fluid">
+        <div class="container mx-auto">
+          <img class="" src="dejabrewLogo.png" alt="logo" style="height: 225px; width: 450px; background-color: #e9ecef; border: none;">
+          <p class="lead">Alcohol is not the answer, it just makes you forget the question.</p>
+        </div>
+      </div>
+    
+      <nav class="navbar navbar-expand-lg navbar-light bg-light text-center">
+        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link" href="#">Homepage<span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="#">My Saved Breweries</a>
+            <a class="nav-link" href="#">Post New Brewery</a>
+          </div>
+        </div>
+
+        <!-- Conditionally render login or logout links -->
+        {{#if logged_in}}
+        <a href="/homepage">Homepage</a> |
+        <button class="no-button" id="logout">logout</button>
+        {{else}}
+        <a href="/login">login</a>
+        {{/if}}
+      </nav>
+      
+    <main class="container container-fluid mt-5">
+      <!-- Render the sub layout -->
+      {{{ body }}}
+    </main>
+
+      {{#if logged_in}}
+  <script src="/js/logout.js"></script>
+  {{/if}}
+  
+</body>
+</html>
