@@ -32,8 +32,8 @@
 
   .login {
     background-image: url("cheers.jpg");
-    height:100%;
-    width: auto;
+    height:auto;
+    width: 100%;
     padding: 20px;
     padding-bottom: 60px;
     font-size: 15px;
