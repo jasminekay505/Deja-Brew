@@ -24,7 +24,7 @@ const postData = [
     {
         title: "Urban Brewing",
         post_text: "House and craft beers served here.",
-        user_id: 4
+        user_id: 5
     },
 ]
 
