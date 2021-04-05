@@ -1,50 +1,67 @@
-html {
-    
-}
-
 .navbar {
     margin-bottom: 50px!important;
     border-radius: 0!important;
     font-family: 'Cinzel Decorative', cursive;
     font-weight: bolder;
-    font-size: 30px;
+    font-size: 24px;
     text-shadow: 2px 2px;
+    background-color: #e79c2a;
+  }
+
+  .logo {
+    height: 225px;
+    width: 450px;
+    background-color: #e9ecef;
+    border: none;
+    border-radius: 20px;
   }
  
 .jumbotron {
     margin-bottom: 0!important;
+    background-image: url("beerglass.jpg")!important;
   }
 
+  .lead {
+      background-color: grey;
+      margin: 2em 8em 0 8em;
+      border-radius: 10px;
+  }
   .panel {
       background-color: #5a3d55;
   }
 
-  .signup {
-      background-color: #5a3d55;
-      padding: 20px;
-      font-size: 20px;
-      margin: 20px;
-  }
-
   .login {
-    background-color: #5a3d55;
+    background-image: url("cheers.jpg");
     padding: 20px;
-    padding-bottom: 155px;
-    font-size: 20px;
-    margin: 20px;
+    padding-bottom: 60px;
+    font-size: 15px;
+    margin-bottom: 300px;
+    border: black;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 10px;
   }
 
   label {
       color: black;
-      background-color: #a2de96;
+      background-color: #e79c2a;
       padding: 5px;
       margin: 5px;
       border-style: solid;
       border-width: 2px;
   }
 
+  .signup {
+	background-color: white;
+    margin-left: 10px;
+    padding: 2px;
+    border-radius: 15px;
+  }
+
   body {
-    background-color: #3ca59d !important;
+    background-image: url("hops.jpg");
+    background-size: 1000px 1100px;
+    font-family: 'Cinzel Decorative', cursive;
   }
 
   h2 {
@@ -60,4 +77,14 @@ html {
     background:white;
     border-radius:5px;
     border:2px solid #555;
+}
+
+footer {
+    position: fixed;
+    height: 50px;
+    background-color: red;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin-bottom: 0px;
 }

@@ -16,8 +16,7 @@
 <body>
   <div class="jumbotron text-center jumbotron-fluid">
     <div class="container mx-auto">
-      <img class="" src="./css/dejabrewLogo.png" alt="logo"
-        style="height: 225px; width: 450px; background-color: #e9ecef; border: none;">
+      <img class="logo" src="./css/dejabrewLogo.png" alt="logo">
       <p class="lead">Alcohol is not the answer, it just makes you forget the question.</p>
     </div>
   </div>
@@ -48,6 +47,12 @@
     <!-- Render the sub layout -->
     {{{ body }}}
   </main>
+
+<footer class="bg-light text-center text-lg-start">
+  <div class="text-center p-2" style="background-color: rgba(0, 0, 0, 0.2);">
+    <p class="text-dark">© 2020 Copyright: Take-5 Team</p>
+  </div>
+</footer>
 
   <!-- Render script for logged in users only -->
   {{#if logged_in}}
