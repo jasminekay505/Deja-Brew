@@ -45,4 +45,4 @@ DB_PW='*****'
 
 
 ## Authors
-Hayden Vennes, Jasmine Sanchez, Nathan Walsh, Zach Johnston, Ashley Whaley
+Hayden Vennes, Jasmine Sanchez, Nathan Walsh, Zack Johnston, Ashley Whaley

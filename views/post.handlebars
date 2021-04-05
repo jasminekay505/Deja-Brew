@@ -8,3 +8,18 @@
     </div>
 </div>
 </div>
+{{> comment-info posts.comment}}
+
+{{#if logged_in}}
+    <form class = "comment-form">
+        <div class="form-group " style="width: 50rem;">
+            <label for="comment-content">What do you think about this post?</label>
+            <textarea class="form-control" name = "comment-content" id="comment-content" rows="3"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Add Comment</button>
+    </form>
+{{/if}}
+
+{{#if logged_in}}
+<script src = "/js/comment.js"></script>
+{{/if}}
