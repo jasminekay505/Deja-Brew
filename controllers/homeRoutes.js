@@ -2,6 +2,9 @@
 const router = require('express').Router();
 const { User, Post, Comment } = require('../models');
 const withAuth = require('../utils/auth');
+// const yelp = require('yelp-fusion');
+//const client = yelp.client('2FHEw_ewvg39QVUSS1iGbd4bllCdnAZomRqgcWi7qBw_U_MXrHNW76V9YRA_38RcSbFDY1YGU7N3KEhXf8CYl1JJnLK7kmsGdKCZMuFyHRSpurIFRjlVhHnnelNrYHYx');
+
 
 //Show all posts on homepage
 router.get('/', async (req, res) => {
@@ -33,18 +36,28 @@ router.get('/post/:id', async (req, res) => {
             include: [
                 {
                     model: Comment,
-                    include: [{
-                        model: User
-                    }]
+                    include: [
+                        {
+                            model: User,
+                        }
+                    ]
                 },
                 {
                     model: User,
-                    attributes: ['username'],
                 },
             ],
         });
 
         const post = postData.get({ plain: true });
+
+        // client.search({
+        //     term: post.title,
+        //     location: 'seattle, wa',
+        // }).then(response => {
+        //     //console.log(response.jsonBody.businesses[0].name);
+        // }).catch(e => {
+        //     //console.log(e);
+        // });
 
         res.render('post', {
             post,
