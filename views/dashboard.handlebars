@@ -1,5 +1,5 @@
 <div class="row">
-  <div class="card" style="width: 50rem;">
+  <div class="card" style="width: 40rem;">
     <div class="card-body">
       <h3 class="card-title">Add a New Brewery:</h3>
       <form class="form new-brewery-form">
@@ -23,21 +23,24 @@
   </div>
 
   {{#if posts.length}}
-  <div class="post-list">
-    <h3>Added Breweries:</h3>
-
-    {{#each user.posts as |post|}}
-    <div class="row mb-2">
-      <div class="col-md-8">
-        <h4><a href="/post/{{post.id}}-1">{{post.title}}</a></h4>
+  <div class="card">
+    <div class="post-list">
+      <div class="card-body">
+        <h3 class="card-title">Added Breweries:</h3>
+        {{#each posts as |post|}}
+        <div class="row mb-2">
+          <div class="col-md-8">
+            <h4><a href="/post/{{post.id}}-1">{{post.title}}</a></h4>
+          </div>
+          <div class="col-md-4">
+            <button class="btn btn-sm btn-danger" data-id="{{post.id}}">DELETE</button>
+          </div>
+        </div>
+        {{/each}}
       </div>
-      <div class="col-md-4">
-        <button class="btn btn-sm btn-danger" data-id="{{post.id}}">DELETE</button>
-      </div>
+      {{/if}}
     </div>
-    {{/each}}
-  </div>
-  {{/if}}
-</div>
 
+</div>
+</div>
 <script src="/js/post.js"></script>
