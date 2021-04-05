@@ -3,11 +3,13 @@ const { Post } = require('../models');
 const postData = [
     {
         title: "Fremont Brewery",
-        post_text: "Kid and dog friendly with free apples and pretzels."
+        post_text: "Kid and dog friendly with free apples and pretzels.",
+        user_id: 1
     },
     {
         title: "Aslan Brewing",
-        post_text: "A great spot to relax."
+        post_text: "A great spot to relax.",
+        user_id: 2
     },
     {
         title: "Outlander Brewery",
@@ -22,7 +24,7 @@ const postData = [
     {
         title: "Urban Brewing",
         post_text: "House and craft beers served here.",
-        user_id: 3
+        user_id: 4
     },
 ]
 

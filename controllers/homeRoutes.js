@@ -32,6 +32,12 @@ router.get('/post/:id', async (req, res) => {
         const postData = await Post.findByPk(req.params.id, {
             include: [
                 {
+                    model: Comment,
+                    include: [{
+                        model: User
+                    }]
+                },
+                {
                     model: User,
                     attributes: ['username'],
                 },
@@ -40,16 +46,8 @@ router.get('/post/:id', async (req, res) => {
 
         const post = postData.get({ plain: true });
 
-        const commentData = await Comment.findAll({
-            include: { model: User },
-            where: { post_id: post.id }
-        });
-
-        const comments = commentData.map((comment) => comment.get({ plain: true }));
-
         res.render('post', {
             post,
-            comments,
             logged_in: req.session.logged_in
         });
 
@@ -70,7 +68,7 @@ router.get('/dashboard', withAuth, async (req, res) => {
         const user = userData.get({ plain: true });
 
         res.render('dashboard', {
-            ...user,
+            user,
             logged_in: true
         });
     } catch (err) {
