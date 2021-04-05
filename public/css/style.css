@@ -4,7 +4,6 @@
     font-family: 'Cinzel Decorative', cursive;
     font-weight: bolder;
     font-size: 24px;
-    text-shadow: 2px 2px;
     background-color: #e79c2a;
   }
 
@@ -32,6 +31,8 @@
 
   .login {
     background-image: url("cheers.jpg");
+    height:auto;
+    width: 100%;
     padding: 20px;
     padding-bottom: 60px;
     font-size: 15px;
@@ -52,16 +53,16 @@
   }
 
   .signup {
-	background-color: white;
+	  background-color: white;
     margin-left: 10px;
     padding: 2px;
     border-radius: 15px;
   }
 
   body {
-    background-image: url("hops.jpg");
-    background-size: 1000px 1100px;
+    background: url("hops.jpg") no-repeat center center fixed;
     font-family: 'Cinzel Decorative', cursive;
+    margin-bottom: 50px;
   }
 
   h2 {
@@ -79,6 +80,11 @@
     border:2px solid #555;
 }
 
+.card { 
+  margin: 10px;
+}
+
+
 footer {
     position: fixed;
     height: 50px;
@@ -87,4 +93,8 @@ footer {
     left: 0px;
     right: 0px;
     margin-bottom: 0px;
+}
+
+.btn { 
+  background-color: #e79c2a;
 }

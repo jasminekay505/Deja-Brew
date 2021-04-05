@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "seed": "node seeds/seed.js"
   },
   "repository": {
     "type": "git",
@@ -27,7 +28,8 @@
     "mysql2": "^2.2.5",
     "nodemon": "^2.0.7",
     "sequelize": "^6.6.2",
-    "yelp": "^1.0.2"
+    "yelp": "^1.0.2",
+    "yelp-fusion": "^3.0.0"
   },
   "devDependencies": {
     "eslint": "^7.23.0"
