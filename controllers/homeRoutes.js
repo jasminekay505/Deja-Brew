@@ -1,24 +1,77 @@
-// Import dependencies
+//Import dependencies
 const router = require('express').Router();
-const { Post, User, Comment } = require('../models');
+const { User, Post, Comment } = require('../models');
 const withAuth = require('../utils/auth');
 
-//Homepage - show all posts
+//Show all posts on homepage
 router.get('/', async (req, res) => {
     try {
         const postData = await Post.findAll({
             include: [
                 {
                     model: User,
-                    attributes: ['username']
-                }
-            ]
+                    attributes: ['username'],
+                },
+            ],
         });
-        const posts = postData.map(post => post.get({ plain: true }));
-        //Might need to change this route
+
+        const posts = postData.map((post) => post.get({ plain: true }));
+
         res.render('homepage', {
             posts,
-            loggedIn: req.session.loggedIn
+            logged_in: req.session.logged_in
+        });
+    } catch (err) {
+        res.status(500).json(err);
+    }
+});
+
+//Single page view with comments
+router.get('/post/:id', async (req, res) => {
+    try {
+        const postData = await Post.findByPk(req.params.id, {
+            include: [
+                {
+                    model: User,
+                    attributes: ['username'],
+                },
+            ],
+        });
+
+        const post = postData.get({ plain: true });
+
+        const commentData = await Comment.findAll({
+            include: { model: User },
+            where: { post_id: post.id }
+        });
+
+        const comments = commentData.map((comment) => comment.get({ plain: true }));
+
+        res.render('post', {
+            post,
+            comments,
+            logged_in: req.session.logged_in
+        });
+
+    } catch (err) {
+        res.status(500).json(err);
+    }
+});
+
+//Dashboard view for logged_in User
+router.get('/dashboard', withAuth, async (req, res) => {
+    try {
+        // Find the logged in user based on the session ID
+        const userData = await User.findByPk(req.session.user_id, {
+            attributes: { exclude: ['password'] },
+            include: [{ model: Post }],
+        });
+
+        const user = userData.get({ plain: true });
+
+        res.render('dashboard', {
+            ...user,
+            logged_in: true
         });
     } catch (err) {
         res.status(500).json(err);
@@ -27,57 +80,24 @@ router.get('/', async (req, res) => {
 
 //Login page
 router.get('/login', (req, res) => {
-    if (req.session.loggedIn) {
-        res.redirect('/');
+    // If the user is already logged in, redirect the request to another route
+    if (req.session.logged_in) {
+        res.redirect('/dashboard');
         return;
     }
+
     res.render('login');
 });
 
-//Single Post
-router.get('/post/:id', withAuth, async (req, res) => {
-    try {
-        const postData = await Post.findOne({
-            where: {
-                id: req.params.id
-            },
-            include: {
-                model: User
-            }
-        });
-
-        if (!postData) {
-            res.status(404).json({ message: 'No post found with this id!' });
-            return;
-        }
-
-        const post = postData.get({ plain: true });
-
-        const commentData = await Comment.findAll({
-            where: {
-                post_id: post.id
-            },
-            include: {
-                model: User
-            }
-        });
-
-        if (!commentData) {
-            res.status(404).json({ message: 'No comment found with this id!' });
-            return;
-        }
-
-        const comments = commentData.map(comment => comment.get({ plain: true }))
-        //Might need to change this route
-        res.render('single-post', {
-            post, comments, loggedIn: req.session.loggedIn
-        });
-
-    } catch (err) {
-        res.status(400).json(err);
+//Sign up page
+router.get('/signup', (req, res) => {
+    // If the user is already logged in, redirect the request to another route
+    if (req.session.logged_in) {
+        res.redirect('/dashboard');
+        return;
     }
-});
 
-//Add a dashboard route
+    res.render('signup');
+});
 
 module.exports = router;
