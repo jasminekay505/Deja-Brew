@@ -10,7 +10,7 @@ THEN I can view breweries added other users.
 WHEN I try to view details about a brewery,  
 THEN I am prompted to login.  
 WHEN I try to login,   
-THEN I can either my email and password or have the option to sign up.  
+THEN I can either enter my email and password or have the option to sign up.  
 WHEN I choose to sign up,   
 THEN I enter my name, email and passowrd and confirm I am over 21.  
 WHEN I view the main page,  
@@ -20,7 +20,7 @@ THEN I am have the option to add a new brewery and see previous breweries I have
 WHEN I submit a new brewery,  
 THEN it is added to the main list of other breweries along with other information from Yelp and appears in my dashboard.  
 WHEN I want to delete a brewery I have posted,  
-THEN I click delete on my dashboard.  
+THEN I click delete on my dashboard and the post is deleted.  
 WHEN I click comment on a post,  
 THEN I can add a comment to another users brewery post.  
 
