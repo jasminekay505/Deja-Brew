@@ -6,15 +6,21 @@ It's been a year since the national quarantine threw us into months of lockdown 
 
 ## Acceptance Criteria:
 WHEN I try to access the application,
-THEN I am prompted to confirm if I am over 21.
-WHEN I confirm I am over 21,
-THEN I am prompted to create a username and password.
+THEN I can view breweries added other users.
+WHEN I try to view details about a brewery,
+THEN I am prompted to login.
+WHEN I try to login, 
+THEN I can either my email and password or have the option to sign up.
+WHEN I choose to sign up, 
+THEN I enter my name, email and passowrd and confirm I am over 21.
 WHEN I view the main page,
 THEN I see a list of breweries added by other users.
-WHEN I click to add a new brewery,
-THEN I am prompted to add in information about it.
+WHEN I go to my dashboard,
+THEN I am have the option to add a new brewery and see previous breweries I have added.
 WHEN I submit a new brewery,
-THEN it is added to the main list of other breweries along with other information from Yelp.
+THEN it is added to the main list of other breweries along with other information from Yelp and appears in my dashboard.
+WHEN I want to delete a brewery I have posted,
+THEN I click delete on my dashboard.
 WHEN I click comment on a post,
 THEN I can add a comment to another users brewery post.
 
