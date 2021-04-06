@@ -2,8 +2,9 @@
 const router = require('express').Router();
 const { User, Post, Comment } = require('../models');
 const withAuth = require('../utils/auth');
-// const yelp = require('yelp-fusion');
-//const client = yelp.client('2FHEw_ewvg39QVUSS1iGbd4bllCdnAZomRqgcWi7qBw_U_MXrHNW76V9YRA_38RcSbFDY1YGU7N3KEhXf8CYl1JJnLK7kmsGdKCZMuFyHRSpurIFRjlVhHnnelNrYHYx');
+require('dotenv').config();
+const yelp = require('yelp-fusion');
+const client = yelp.client(process.env.API_KEY);
 
 
 //Show all posts on homepage
@@ -49,18 +50,19 @@ router.get('/post/:id', async (req, res) => {
         });
 
         const post = postData.get({ plain: true });
-
-        // client.search({
-        //     term: post.title,
-        //     location: 'seattle, wa',
-        // }).then(response => {
-        //     //console.log(response.jsonBody.businesses[0].name);
-        // }).catch(e => {
-        //     //console.log(e);
-        // });
+    
+        client.search({
+            term: post.title,
+            location: post.location,
+        }).then(response => {
+            //console.log(response.jsonBody.businesses[0].name);
+        }).catch(e => {
+            //console.log(e);
+        });
 
         res.render('post', {
             post,
+            yelp,
             logged_in: req.session.logged_in
         });
 
