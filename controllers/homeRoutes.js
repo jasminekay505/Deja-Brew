@@ -2,6 +2,7 @@
 const router = require('express').Router();
 const { User, Post, Comment } = require('../models');
 const withAuth = require('../utils/auth');
+//Yelp dependencies
 require('dotenv').config();
 const yelp = require('yelp-fusion');
 const client = yelp.client(process.env.API_KEY);
@@ -50,19 +51,21 @@ router.get('/post/:id', async (req, res) => {
         });
 
         const post = postData.get({ plain: true });
-    
-        client.search({
-            term: post.title,
-            location: post.location,
-        }).then(response => {
-            //console.log(response.jsonBody.businesses[0].name);
-        }).catch(e => {
-            //console.log(e);
-        });
+        
+        //using yelp to search for business
+        // client.search({
+        //     term: post.title,
+        //     location: post.location,
+        // }).then(response => {
+        //     //console.log(response.jsonBody.businesses[0].name);
+        // }).catch(e => {
+        //     //console.log(e);
+        // });
 
         res.render('post', {
             post,
-            yelp,
+            //pass in yelp comment here
+            // yelp,
             logged_in: req.session.logged_in
         });
 
