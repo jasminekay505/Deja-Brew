@@ -10,7 +10,7 @@ THEN I can view breweries added other users.
 WHEN I try to view details about a brewery,  
 THEN I am prompted to login.  
 WHEN I try to login,   
-THEN I can either my email and password or have the option to sign up.  
+THEN I can either enter my email and password or have the option to sign up.  
 WHEN I choose to sign up,   
 THEN I enter my name, email and passowrd and confirm I am over 21.  
 WHEN I view the main page,  
