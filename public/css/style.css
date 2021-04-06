@@ -1,100 +1,95 @@
 .navbar {
-    margin-bottom: 50px!important;
-    border-radius: 0!important;
-    font-family: 'Cinzel Decorative', cursive;
-    font-weight: bolder;
-    font-size: 24px;
-    background-color: #e79c2a;
-  }
-
-  .logo {
-    height: 225px;
-    width: 450px;
-    background-color: #e9ecef;
-    border: none;
-    border-radius: 20px;
-  }
- 
-.jumbotron {
-    margin-bottom: 0!important;
-    background-image: url("beerglass.jpg")!important;
-  }
-
-  .lead {
-      background-color: grey;
-      margin: 2em 8em 0 8em;
-      border-radius: 10px;
-  }
-  .panel {
-      background-color: #5a3d55;
-  }
-
-  .login {
-    background-image: url("cheers.jpg");
-    height:auto;
-    width: 100%;
-    padding: 20px;
-    padding-bottom: 60px;
-    font-size: 15px;
-    margin-bottom: 300px;
-    border: black;
-    border-style: solid;
-    border-width: 2px;
-    border-radius: 10px;
-  }
-
-  label {
-      color: black;
-      background-color: #e79c2a;
-      padding: 5px;
-      margin: 5px;
-      border-style: solid;
-      border-width: 2px;
-  }
-
-  .signup {
-	  background-color: white;
-    margin-left: 10px;
-    padding: 2px;
-    border-radius: 15px;
-  }
-
-  body {
-    background: url("hops.jpg") no-repeat center center fixed;
-    font-family: 'Cinzel Decorative', cursive;
-    margin-bottom: 50px;
-  }
-
-  h2 {
-      background-color: #e79c2a;
-      margin-right: 70%;
-      border-style: solid;
-      border-width: 2px;
-  }
-  
-  input[type='checkbox'] {
-    width:20px;
-    height:30px;
-    background:white;
-    border-radius:5px;
-    border:2px solid #555;
+  margin-bottom: 50px !important;
+  border-radius: 0 !important;
+  font-family: "Cinzel Decorative", cursive;
+  font-weight: bolder;
+  font-size: 24px;
+  background-color: #e79c2a;
 }
 
-.card { 
+.logo {
+  height: 225px;
+  width: 450px;
+  border: none;
+  border-radius: 20px;
+}
+
+.jumbotron {
+  margin-bottom: 0 !important;
+  background-image: url("beerglass.jpg") !important;
+}
+
+.lead {
+  margin: 2em 8em 0 8em;
+  border-radius: 10px;
+  font-size: 1.3rem;
+  font-weight: bolder;
+}
+.panel {
+  background-color: #5a3d55;
+}
+
+.login {
+  background-image: url("cheers.jpg");
+  height: auto;
+  width: 100%;
+  padding: 20px;
+  padding-bottom: 60px;
+  font-size: 15px;
+  margin-bottom: 300px;
+  border: black;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 10px;
+}
+
+label {
+  color: white;
+  text-decoration: underline;
+  padding: 5px;
+  margin: 5px;
+}
+
+.signup {
+  margin-left: 10px;
+  padding: .375rem .75rem;
+}
+
+body {
+  background: url("hops.jpg") no-repeat center center fixed;
+  font-family: "Cinzel Decorative", cursive;
+  margin-bottom: 50px;
+}
+
+h2 {
+  color: white;
+  margin-right: 70%;
+  text-decoration: underline;
+}
+
+input[type="checkbox"] {
+  width: 20px;
+  height: 30px;
+  background: white;
+  border-radius: 5px;
+  border: 2px solid #555;
+}
+
+.card {
   margin: 10px;
 }
 
-
 footer {
-    position: fixed;
-    height: 50px;
-    background-color: red;
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
-    margin-bottom: 0px;
+  position: fixed;
+  height: 50px;
+  background-color: red;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  margin-bottom: 0px;
 }
 
-.btn { 
+.btn {
   background-color: #e79c2a;
+  color: white;
 }

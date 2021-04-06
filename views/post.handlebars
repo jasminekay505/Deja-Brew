@@ -1,5 +1,5 @@
 <div class="row">
-    <div class="card" style="width: 50rem;">
+    <div class="card mx-auto" style="width: 50rem;">
         <div class="card-body">
             <h5 class="card-title"><a href='/post/{{post.id}}'>{{post.title}}</a></h5>
             <p class="card-text" id="card-details">Posted by: {{post.user.username}} </p>
@@ -12,7 +12,7 @@
     </div>
 </div>
 <div class="row">
-    <div class="card" style="width: 50rem;">
+    <div class="card mx-auto" style="width: 50rem;">
         <div class="card-body">
             <h5 class="card-title">Comments:</h5>
             {{#each post.comments as |comment|}}
@@ -24,7 +24,7 @@
 
 {{#if logged_in}}
 <div class="row">
-<div class="card" style="width: 50rem;">
+<div class="card mx-auto" style="width: 50rem;">
     <div class="card-body">
         <div class="card-body">
             <form class="form " id="new-comment-form">
