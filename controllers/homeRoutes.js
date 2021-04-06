@@ -52,7 +52,7 @@ router.get('/post/:id', async (req, res) => {
 
         // client.search({
         //     term: post.title,
-        //     location: 'seattle, wa',
+        //     location: post.location,
         // }).then(response => {
         //     //console.log(response.jsonBody.businesses[0].name);
         // }).catch(e => {
