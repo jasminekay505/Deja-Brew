@@ -1,3 +1,4 @@
+//url:https://twitter.github.io/typeahead.js/examples/
 var substringMatcher = function(strs) {
     return function findMatches(q, cb) {
       var matches, substringRegex;
