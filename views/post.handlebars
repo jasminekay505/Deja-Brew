@@ -2,7 +2,8 @@
     <div class="card mx-auto" style="width: 50rem;">
         <div class="card-body">
             <h5 class="card-title">
-                <a class="brewtitle" href='/post/{{post.id}}'>{{post.title}}</a></h5>
+                <a class="brewtitle" href='/post/{{post.id}}'>{{post.title}}</a>
+            </h5>
             <p class="card-text" id="card-details">Posted by: {{post.user.username}} </p>
             <p class="card-text">Location: {{post.location}}</p>
             <br>
@@ -26,19 +27,19 @@
 
 {{#if logged_in}}
 <div class="row">
-<div class="card mx-auto" style="width: 50rem;">
-    <div class="card-body">
+    <div class="card mx-auto" style="width: 50rem;">
         <div class="card-body">
-            <form class="form " id="new-comment-form">
-                <div class="form-group">
-                    <label class="comment" for="comment-text">Add a comment:</label>
-                    <textarea class="form-control" id="comment-text" rows="3"></textarea>
-                </div>
-                <button type="submit" class="btn btn-dark">Submit</button>
-            </form>
+            <div class="card-body">
+                <form class="form " id="new-comment-form">
+                    <div class="form-group">
+                        <label class="comment" for="comment-text">Add a comment:</label>
+                        <textarea class="form-control" id="comment-text" rows="3"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-dark">Submit</button>
+                </form>
+            </div>
         </div>
     </div>
-</div>
 </div>
 {{/if}}
 
