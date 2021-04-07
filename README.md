@@ -25,7 +25,7 @@ WHEN I click comment on a post,
 THEN I can add a comment to another users brewery post.  
 
 ## Application Deployment
-https://git.heroku.com/powerful-reaches-20419.git
+https://guarded-bayou-67190.herokuapp.com/
 
 ## Technology Used
 Heroku
