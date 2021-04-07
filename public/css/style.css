@@ -55,6 +55,10 @@
     margin-left: 10px;
 }
 
+.row {
+  margin: 10px;
+}
+
 .newbrew {
   background-image: url("cheers.jpg");
   height: auto;
@@ -85,7 +89,7 @@ h3 {
 
 label {
   color: white;
-  font-weight: bold;
+  font-weight: bolder;
   text-decoration: underline;
   text-shadow: 2px 2px 5px black;
 }
@@ -128,8 +132,15 @@ input[type="checkbox"] {
 }
 
 .brewtitle {
-    color: black!important;
+    color: white !important;
     font-weight: bolder;
+    text-shadow: 2px 2px 5px black;
+    text-decoration: underline;
+}
+
+.comment {
+  font-size: 1.25rem;
+  top: 0px;
 }
 
 footer {
