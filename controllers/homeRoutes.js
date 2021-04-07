@@ -52,20 +52,19 @@ router.get('/post/:id', async (req, res) => {
 
         const post = postData.get({ plain: true });
         
-        //using yelp to search for business
-        // client.search({
-        //     term: post.title,
-        //     location: post.location,
-        // }).then(response => {
-        //     //console.log(response.jsonBody.businesses[0].name);
-        // }).catch(e => {
-        //     //console.log(e);
-        // });
+        //Using Yelp Fusion to search for business
+       const yelp = await client.search({
+            term: post.title,
+            location: post.location,
+        
+        });
+        const business = yelp.jsonBody.businesses[0];
 
+        console.log(yelp.jsonBody);
         res.render('post', {
             post,
-            //pass in yelp comment here
-            // yelp,
+            //pass in Yelp object here
+            business,
             logged_in: req.session.logged_in
         });
 
