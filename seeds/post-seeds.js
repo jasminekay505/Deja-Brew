@@ -21,7 +21,7 @@ const postData = [
     },
     {
         title: "Rooftop Brewing",
-        post_text:"Microbrewery and tasting room with rotating food trucks.",
+        post_text: "Microbrewery and tasting room with rotating food trucks.",
         location: "Seattle, WA",
         user_id: 4
     },

@@ -37,28 +37,6 @@ const delButtonHandler = async (event) => {
 
 };
 
-// const editButtonHandler = async (event) => {
-//         const id = event.target.getAttribute('edit-data-id');
-
-//         const title = document.querySelector('#brewery-name').value.trim();
-//         const location = document.querySelector('#brewery-location').value.trim();
-//         const post_text = document.querySelector('#brewery-desc').value.trim();
-
-//         const response = await fetch(`/api/posts/${id}`, {
-//             method: 'PUT',
-//             body: JSON.stringify({ title, location, post_text }),
-//             headers: {
-//                 'Content-type': 'application/json',
-//             },
-//         });
-
-//         if (response.ok) {
-//             document.location.replace('/dashboard');
-//         } else {
-//             alert('Failed to update post');
-//         }
-// };
-
 document
     .querySelector('.new-brewery-form')
     .addEventListener('submit', newPostHandler);
@@ -66,7 +44,3 @@ document
 document
     .querySelector('#delete-button')
     .addEventListener('click', delButtonHandler);
-
-// document
-//     .querySelector('#update-button')
-//     .addEventListener('click', editButtonHandler);
